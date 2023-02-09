@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <script defer src="./script.js"></script>
     <title>Document</title>
 </head>
@@ -15,40 +16,43 @@
 <body class="page">
     <div class="wrapper">
         <header class="header">
-            <div class="container--large">
-                <nav class="header__top">
-                    <div class="logo">
-                        <a class="logo__link" href="#">Dialog</a>
-                    </div>
+            <div class="container--lg">
+                <div class="header-inner">
 
-                    <div class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item">
-                                <a class="menu__link" href="#">О нас</a>
+                    <a class="logo">
+                        <img class="logo__img" src="./img/Dialog.png" alt="logo">
+                    </a>
+
+                    <nav class="menu">
+                        <ul class="menu__list list">
+                            <li class="menu__item">
+                                <a class="menu__link link" href="#">О нас</a>
                             </li>
-                            <li class="menu__list-item">
-                                <a class="menu__link" href="#">Каталог</a>
+                            <li class="menu__item">
+                                <a class="menu__link link" href="#">Каталог</a>
                             </li>
-                            <li class="menu__list-item">
-                                <a class="menu__link" href="#">Записаться онлайн</a>
+                            <li class="menu__item">
+                                <a class="menu__link link" href="#">Записаться онлайн</a>
                             </li>
-                            <li class="menu__list-item">
-                                <a class="menu__link" href="#">Контакты</a>
+                            <li class="menu__item">
+                                <a class="menu__link link" href="#">Контакты</a>
                             </li>
-                            <li class="menu__list-item">
-                                <a class="menu__link" href="#">Отзывы</a>
+                            <li class="menu__item">
+                                <a class="menu__link link" href="#">Отзывы</a>
                             </li>
-                            <li class="menu__list-item">
-                                <a class="menu__link" href="#">Статьи</a>
+                            <li class="menu__item">
+                                <a class="menu__link link" href="#">Статьи</a>
                             </li>
                         </ul>
+                    </nav>
 
-                        <div class="callback">
-                            <img class="callback__img" src="./img/whatsapp_icon.svg" alt="whatsapp_icon">
-                            <a class="callback__link" href="#modal">Заказать звонок</a>
-                        </div>
+                    <div class="callback">
+                        <a class="callback__link link" href="#modal">
+                            <img class="callback__img" src="./img/whatsapp_icon.svg" alt="whatsapp_icon">Заказать
+                            звонок</a>
+                    </div>
 
-                        <!-- <div id="modal" class="modal">
+                    <!-- <div id="modal" class="modal">
                             <div>
                                 <p>Вы можете сэкономить время, и позвонить нам прямо сейчас</p>
                                 <p>
@@ -80,246 +84,331 @@
                                 </form>
                             </div>
                         </div> -->
-                    </div>
-                </nav>
+                </div>
             </div>
-
-            <section class="hero">
-                <h1 class="hero__heading">Логопедический центр Dialog</h1>
-                <p class="hero__subheading">Оказываем профессиональную логопедическую помощь в области логопедии и
-                    дефектологии </p>
-                <img src="./img/hero_illustration.png" alt="little_boy_pulls_his_ears" class="hero__img">
-            </section>
         </header>
+
         <main>
+            <section class="hero">
+                <div class="container--lg">
+                    <div class="hero-inner">
+                        <div class="container--md">
+                            <div class="hero__info">
+                                <h1 class="hero__heading">Логопедический центр Dialog</h1>
+                                <p class="hero__subheading">Оказываем профессиональную<span class="paragraph">
+                                        логопедическую помощь в области</span>
+                                    логопедии
+                                    и
+                                    дефектологии </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="sellouts">
-                <h2 class="sellouts__heading">Первое занятие в подарок</h2>
-                <p class="sellouts__subheading">Акция действительна до <time datetime="2023-03-08">08.03.23</time></p>
-                <img src="./img/gift.svg" alt="gift" class="sellouts__img">
+                <div class="container--md">
+                    <div class="sellouts-inner">
+                        <div class="sellouts__info">
+                            <h2 class="sellouts__heading">Первое занятие <span class="paragraph">в подарок</span></h2>
+                            <p class="sellouts__subheading">Акция действительна до <time class="datetime"
+                                    datetime="2023-03-08">08.03.23</time>
+                            </p>
+                        </div>
+                        <img src="./img/gift.svg" alt="gift" class="sellouts__img">
+                    </div>
+                </div>
             </section>
 
             <section class="benefits">
-                <h2 class="benefits visually-hidden">Преимущества</h2>
-                <dl class="benefits__list">
-                    <div class="benefit__list-item">
-                        <dt class="benefit__title">Видимый результат</dt>
-                        <img src="./img/rocket.svg" alt="rocket" class="benefit__img">
-                        <dd class="benefit__desc">Ведем детальную диагностическую карту каждого клиента</dd>
-                    </div>
+                <div class="container--md">
+                    <h2 class="benefits__heading visually-hidden">Преимущества</h2>
+                    <dl class="benefits__list list">
+                        <div class="benefit">
+                            <dt class="benefit__title">Видимый результат</dt>
+                            <img src="./img/rocket.svg" alt="rocket" class="benefit__img">
+                            <dd class="benefit__desc">Ведем детальную диагностическую карту каждого клиента</dd>
+                        </div>
 
-                    <div class="benefit__list-item">
-                        <dt class="benefit__title">Удобное месторасположение</dt>
-                        <img src="./img/geolocation.svg" alt="geolocation" class="benefit__img">
-                        <dd class="benefit__desc">Расположение центра в самом центре Якутска!</dd>
-                    </div>
+                        <div class="benefit">
+                            <dt class="benefit__title">Удобное месторасположение</dt>
+                            <img src="./img/geolocation.svg" alt="geolocation" class="benefit__img">
+                            <dd class="benefit__desc">Расположение центра в самом центре Якутска!</dd>
+                        </div>
 
-                    <div class="benefit__list-item">
-                        <dt class="benefit__title">Гибкий подход</dt>
-                        <img src="./img/handshake.svg" alt="handshake" class="benefit__img">
-                        <dd class="benefit__desc">Скорректируем время занятий под вас. При необходимости заменим
-                            педагога</dd>
-                    </div>
+                        <div class="benefit">
+                            <dt class="benefit__title">Гибкий подход</dt>
+                            <img src="./img/handshake.svg" alt="handshake" class="benefit__img">
+                            <dd class="benefit__desc">Скорректируем время занятий под вас. При необходимости
+                                заменим
+                                педагога</dd>
+                        </div>
 
-                    <div class="benefit__list-item">
-                        <dt class="benefit__title">Запись онлайн</dt>
-                        <img src="./img/devices.svg" alt="smart_devices" class="benefit__img">
-                        <dd class="benefit__desc">Возможность записаться на занятия дистанционно.</dd>
-                    </div>
-                </dl>
+                        <div class="benefit">
+                            <dt class="benefit__title">Запись онлайн</dt>
+                            <img src="./img/devices.svg" alt="smart_devices" class="benefit__img">
+                            <dd class="benefit__desc">Возможность записаться на занятия дистанционно.</dd>
+                        </div>
+                    </dl>
+                </div>
             </section>
 
             <section class="services">
-                <h2 class="services__heading">Популярные услуги</h2>
-                <p class="services__subheading">Говорить - здорово!</p>
+                <div class="container--lg">
+                    <div class="services-inner">
+                        <div class="services__info">
+                            <h2 class="services__heading">Популярные услуги</h2>
+                            <p class="services__subheading">Говорить - здорово!</p>
+                        </div>
+                        <div class="services__cards">
+                            <div class="service">
+                                <h3 class="service__title">Заикание</h3>
+                                <img class="service__img" src="./img/service_img_boy.png"
+                                    alt="little_boy_covering_his_mouth">
+                                <p class="service__price">от 2300Р/академический час</p>
+                                <a href="#" class="service__link link">Подробнее</a>
+                            </div>
 
-                <div class="service">
-                    <h3 class="service__heading">Заикание</h3>
-                    <p class="service__price">от 2300Р/академический час</p>
-                    <a href="#" class="service__link">Подробнее</a>
+                            <div class="service">
+                                <h3 class="service__title">Ринолалия</h3>
+                                <img class="service__img" src="./img/service_img_girl.png" alt="little_girl_reading">
+                                <p class="service__price">от 2400Р/академический час</p>
+                                <a href="#" class="service__link link">Подробнее</a>
+                            </div>
+
+                            <div class="service">
+                                <h3 class="service__title">Задержка речевого развития</h3>
+                                <img class="service__img" src="./img/teacher_and_ patient.png"
+                                    alt="teacher_and_ patient">
+                                <p class="service__price">от 2400Р/академический час</p>
+                                <a href="#" class="service__link link">Подробнее</a>
+                            </div>
+
+                            <div class="service">
+                                <h3 class="service__title">Дислексия</h3>
+                                <img class="service__img" src="./img/teacher_and_patient.png" alt="teacher_and_patient">
+                                <p class="service__price">от 2600Р/академический час</p>
+                                <a href="#" class="service__link link">Подробнее</a>
+                            </div>
+                        </div>
+                        <a href="#" class="services__more link">Смотреть все услуги в каталоге</a>
+                    </div>
                 </div>
-
-                <div class="service">
-                    <h3 class="service__heading">Ринолалия</h3>
-                    <p class="service__price">от 2400Р/академический час</p>
-                    <a href="#" class="service__link">Подробнее</a>
-                </div>
-
-                <div class="service">
-                    <h3 class="service__heading">Задержка речевого развития</h3>
-                    <p class="service__price">от 2400Р/академический час</p>
-                    <a href="#" class="service__link">Подробнее</a>
-                </div>
-
-                <div class="service">
-                    <h3 class="service__heading">Дислексия</h3>
-                    <p class="service__price">от 2600Р/академический час</p>
-                    <a href="#" class="service__link">Подробнее</a>
-                </div>
-
-                <a href="#" class="services__more">Смотреть все услуги в каталоге</a>
             </section>
 
             <section class="blog">
-                <h2 class="blog__heading">Полезные статьи </h2>
-
-
-            </section>
-
-            <section class="specialist">
-                <h2 class="specialist__heading">Наш лучший специалист</h2>
-                <img class="specialist__img" src="./img/customer1_img.png" alt="photo_of_a_specialist">
-                <p class="specialist__price">Занятия очно от 1400р</p>
-                <b class="specialist__name">Анна Павловна Сидоренко</b>
-                <p class="specialist__info">Логопед
-                    Практический опыт: <time datetime="2009-06">с июня 2009 г</time>.</p>
-                <p class="specialist__text">Являюсь активным, эрудированным, методически грамотным и инициативным
-                    специалистом. Имею высокие профессиональные качества, такие как: умение анализировать педагогическую
-                    деятельность, выявлять наиболее значимые проблемы и находить эффективные пути их решения. Использую
-                    в своей работе новейшие интерактивные технологии и методики. В работе всегда добиваюсь высоких
-                    результатов в обучении и воспитании детей с различными нарушениями речи.Определяю причины и
-                    механизмы нарушений у детей и использую различные методы, результаты диагностического обследования,
-                    информационный материал. Осуществляю комплектование подгрупп по результатам диагностики с учетом
-                    структуры нарушения, психофизических особенностей и возможностей учащихся. Развиваю компенсаторные
-                    возможности каждого ребенка, выполняю ориентированную коррекцию, слежу за динамикой и продвижением.
-                </p>
-                <a href="#" class="sign-up">Записаться на занятие</a>
-            </section>
-
-            <section class="reviews">
-                <h2 class="reviews__heding visually-hidden">Отзывы</h2>
-                <ul class="review">
-                    <li>
-                        <blockquote>
-                            <img src="./img/customer1_img.png" alt="customer_photo">
-                            <cite class="review__name">Юля Шкац</cite>
-                            <p class="review__text">Я хотела бы выразить благодарность центру за профессионализм и
-                                творческий подход к своей работе. В самом центре очень уютная обстановка. Что касается
-                                речи, то сложные звуки дочь освоила и осваивает без лишних усилий, все просто, ясно и
-                                есть результаты после каждого урока. Логопед грамотно объяснет нам что делать дома и
-                                четко выстраивает программу занятий на уроке. Все компетенто и по делу.</p>
-                        </blockquote>
-                    </li>
-
-                    <li>
-                        <blockquote>
-                            <img src="./img/customer1_img.png" alt="customer_photo">
-                            <cite class="review__name">Валерия</cite>
-                            <p class="review__text">Ребенок заговорил и его нечленораздельные звуки стали словами.
-                                Спасибо Вам замечательные люди! Вы делаете хорошее дело.Огромное спасибо от Семьи
-                                Петровых!</p>
-                        </blockquote>
-                    </li>
-
-                    <li>
-                        <blockquote>
-                            <img src="./img/customer1_img.png" alt="customer_photo">
-                            <cite class="review__name">Алексей Карпов</cite>
-                            <p class="review__text">Я и вся моя семья очень благодарны логопеду за ее долгую и
-                                кропотливую работу.Уже после первых занятий моя дочь научилась правильно дуть, через
-                                полгода перестала говорить слова на вдохе, а сейчас у нее активная речь, и все это –
-                                ваша заслуга.</p>
-                        </blockquote>
-                    </li>
-
-                    <button class="btn" type="button"></button>
-                    <button class="btn" type="button"></button>
-            </section>
-
-            <section class="contacts">
-                <h2 class="contacts__heading">Контакты</h2>
-                <div class="contacts__info">
-                    <dl>
-                        <dt>Адрес нашего офиса :</dt>
-                        <dd>
-                            <address>г. Якутск, Улица Петра Алексеева, 6, офис 5, этаж 4.</address>
-                        </dd>
-
-                        <dt>Телефон:</dt>
-                        <dd><a href="tel:+79142923088">+7 914 292 30 88</a></dd>
-
-                        <dt>Часы работы</dt>
-                        <dd>
-                            <time>
-                                <meta itemprop="openingHours" content="08:30-20:00">с 8:30 до 20:00
-                            </time>
-                        </dd>
-
-                        <dt>Почта</dt>
-                        <dd><a href="mailto:">dialogdialog@company.com</a></dd>
-
-                        <dt class="visually-hidden">Социальные сети</dt>
-                        <dd>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/sm-whatsapp_icon.svg" alt="whatsapp_icon">
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/sm-vk-icon.svg" alt="vk_icon">
-                                    </a>
-                                </li>
-                            </ul>
-                        </dd>
-                    </dl>
+                <div class="container--lg">
+                    <h2 class="blog__heading">Полезные статьи</h2>
                 </div>
-
-                <div style="position:relative;overflow:hidden;"><a
-                        href="https://yandex.ru/maps/org/chudo_detki/163779727079/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Чудо детки</a><a
-                        href="https://yandex.ru/maps/74/yakutsk/category/day_care_center_kindergarten/184107206/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Day care center, kindergarten in
-                        Yakutsk</a><a
-                        href="https://yandex.ru/maps/74/yakutsk/category/children_developmental_center/184107204/?utm_medium=mapframe&utm_source=maps"
-                        style="color:#eee;font-size:12px;position:absolute;top:28px;">Children's developmental center in
-                        Yakutsk</a><iframe
-                        src="https://yandex.ru/map-widget/v1/?ll=129.737006%2C62.035250&mode=poi&poi%5Bpoint%5D=129.737182%2C62.035309&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D163779727079&z=20.49"
-                        width="560" height="400" frameborder="1" allowfullscreen="true"
-                        style="position:relative;"></iframe>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container--md">
-                <nav>
-                    <ul>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Мобильная версия</a></li>
-                        <li><a href="#">О компании</a></li>
+                <div class="carousel">
+                    <ul class="slider" id="slider">
+                        <li class="carousel__item">
+                            <img src="./img/service_img_boy.png" alt="1" width="300">
+                            <a class="blog__more link" href="#">Читать подробнее</a>
+                        </li>
+                        <li class="carousel__item">
+                            <img src="./img/service_img_girl.png" alt="2" width="300">
+                            <a class="blog__more link" href="#">Читать подробнее</a>
+                        </li>
+                        <li class="carousel__item">
+                            <img src="./img/teacher_and_ patient.png" alt="3" width="300">
+                            <a class="blog__more link" href="#">Читать подробнее</a>
+                        </li>
                     </ul>
-
-                    <ul>
-                        <li><a href="#">Работа для специлистов</a></li>
-                        <li><a href="#">Партнерская программа</a></li>
-                        <li><a href="#">Наши специалисты</a></li>
-                    </ul>
-                </nav>
-
-                <dl>
-                    <dt>Рабочие дни:</dt>
-                    <dd><time>
-                            <meta itemprop="openingHours" content="Mo-Su 08:30-20:00">Ежедневно с 8:30 до 20:00
-                        </time></dd>
-
-                    <dt>Месторасположение:</dt>
-                    <dd>
-                        <address>улица Петра Алексеева, 6, ​5 офис; 4 этаж Строительный округ, Якутск</address>
-                    </dd>
-
-                    <dt>Связаться с нами:</dt>
-                    <dd><a href="tel:+79142923088">+7 914 292 30 88</a></dd>
-                </dl>
-
-                <div class="callback">
-                    <img class="callback__img" src="./img/whatsapp_icon.svg" alt="whatsapp_icon">
-                    <a class="callback__link" href="#modal">Заказать звонок</a>
                 </div>
+                <div class="controls">
+                    <button id="btnPrev" class="carousel__control prev">&#x21d0;</button>
+                    <button id="btnNext" class="carousel__control next">&#x21d2;</button>
+                </div>
+    </div>
+    </section>
+
+    <section class="specialist">
+        <h2 class="specialist__heading">Наш лучший специалист</h2>
+        <img class="specialist__img"
+            src="./img/logoped-chto-dolzhen-umet-specialist-po-rabote-s-rechyu-i-gde-ehtomu-nauchitsya1.jpg"
+            alt="photo_of_a_specialist">
+        <p class="specialist__price">Занятия очно от 1400р</p>
+        <b class="specialist__name">Анна Павловна Сидоренко</b>
+        <p class="specialist__info">Логопед
+            Практический опыт: <time datetime="2009-06">с июня 2009 г</time>.</p>
+        <p class="specialist__text">Являюсь активным, эрудированным, методически грамотным и
+            инициативным
+            специалистом. Имею высокие профессиональные качества, такие как: умение анализировать
+            педагогическую
+            деятельность, выявлять наиболее значимые проблемы и находить эффективные пути их
+            решения.
+            Использую
+            в своей работе новейшие интерактивные технологии и методики. В работе всегда добиваюсь
+            высоких
+            результатов в обучении и воспитании детей с различными нарушениями речи.Определяю
+            причины и
+            механизмы нарушений у детей и использую различные методы, результаты диагностического
+            обследования,
+            информационный материал. Осуществляю комплектование подгрупп по результатам диагностики
+            с
+            учетом
+            структуры нарушения, психофизических особенностей и возможностей учащихся. Развиваю
+            компенсаторные
+            возможности каждого ребенка, выполняю ориентированную коррекцию, слежу за динамикой и
+            продвижением.
+        </p>
+        <a href="#" class="sign-up link">Записаться на занятие</a>
+    </section>
+
+    <section class="reviews">
+        <h2 class="reviews__heding visually-hidden">Отзывы</h2>
+        <ul class="reviews__list list">
+            <li class="review__item">
+                <blockquote>
+                    <img src="./img/customer1_img.png" alt="customer_photo">
+                    <cite class="review__name">Юля Шкац</cite>
+                    <p class="review__text">Здравствуйте! Спасибо большое! Вы нам очень помогли 😊👍🏻! Будем
+                        стараться дальше. Если, будут затруднения, обратимся вновь. Да, Жорик хочет Вас
+                        навещать. Ему понравилось с Вами общаться 😊! Благодарю за видео, благодарю за работу
+                        🌹🌹🌹! Буду всем рекомендовать ✊🏻😊</p>
+                </blockquote>
+            </li>
+
+            <li class="review__item">
+                <blockquote>
+                    <img src="./img/customer1_img.png" alt="customer_photo">
+                    <cite class="review__name">Валерия</cite>
+                    <p class="review__text">От всего сердца благодарна Светлане Николаевне за оказанную помощь ,
+                        чтобы я не заикалась. Спасибо огромное за то, что научили меня правильно дышать,
+                        говорить без запинок , быть уверенной в себе! Желаю успехов в работе , счастья и удачи !
+                        С благодарностью Клаудия Кривошапкина</p>
+                </blockquote>
+            </li>
+
+            <li class="review__item">
+                <blockquote>
+                    <img src="./img/customer1_img.png" alt="customer_photo">
+                    <cite class="review__name">Алексей Карпов</cite>
+                    <p class="review__text">Ходим на занятия , и очень довольны , в 3 года сын не говорил вообще
+                        , врач невролог говорил оформлять инвалидность . Потом нам порекомендовали занятия с
+                        логопедом именно здесь , начали посещать , спустя 3 месяца , сын начал говорить
+                        отдельные слова , постепенно появилась фразовая речь . Чему мы очень рады ! Спасибо
+                        большое , за качественные занятия !
+                        Хочу отметить , что логопед именно ставит звуки , делает массаж языка и многое другое .
+                        Не как в других центрах , просто дают игрушки поиграть и берут же за это деньги , я так
+                        и дома сама могу.</p>
+                </blockquote>
+            </li>
+
+            <li class="review__item">
+                <blockquote>
+                    <img src="./img/customer1_img.png" alt="customer_photo">
+                    <cite class="review__name">Алексей Карпов</cite>
+                    <p class="review__text">Светлана Николаевна- лучший логопед в городе. 2 года или даже больше
+                        я потратила кучу времени и денег на других логопедов. Результата никакого не было. Тут
+                        занимаемся с середины августа и прогресс отличный все звуки нам поставила. Сын ходит с
+                        удовольствием, даже дома стал сам заниматься, очень мотивирует детей. Благодарность моя
+                        безмерна</p>
+                </blockquote>
+            </li>
+
+            <button class="btn" type="button"></button>
+            <button class="btn" type="button"></button>
+    </section>
+
+    <section class="contacts">
+        <h2 class="contacts__heading">Контакты</h2>
+        <div class="contacts__info">
+            <dl>
+                <dt>Адрес нашего офиса :</dt>
+                <dd>
+                    <address>г. Якутск, Улица Петра Алексеева, 6, офис 5, этаж 4.</address>
+                </dd>
+
+                <dt>Телефон:</dt>
+                <dd><a class="link" href="tel:+79142923088">+7 914 292 30 88</a></dd>
+
+                <dt>Часы работы</dt>
+                <dd>
+                    <time>
+                        <meta itemprop="openingHours" content="08:30-20:00">с 8:30 до 20:00
+                    </time>
+                </dd>
+
+                <dt>Почта</dt>
+                <dd><a class="link" href="mailto:">dialogdialog@company.com</a></dd>
+
+                <dt class="visually-hidden">Социальные сети</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <a class="link" href="#">
+                                <img src="./img/sm-whatsapp_icon.svg" alt="whatsapp_icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img class="link" src="./img/sm-vk-icon.svg" alt="vk_icon">
+                            </a>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <div style="position:relative;overflow:hidden;"><a
+                href="https://yandex.ru/maps/org/chudo_detki/163779727079/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:0px;">Чудо детки</a><a
+                href="https://yandex.ru/maps/74/yakutsk/category/day_care_center_kindergarten/184107206/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:14px;">Day care center,
+                kindergarten in
+                Yakutsk</a><a
+                href="https://yandex.ru/maps/74/yakutsk/category/children_developmental_center/184107204/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:28px;">Children's
+                developmental
+                center in
+                Yakutsk</a><iframe
+                src="https://yandex.ru/map-widget/v1/?ll=129.737006%2C62.035250&mode=poi&poi%5Bpoint%5D=129.737182%2C62.035309&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D163779727079&z=20.49"
+                width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container--md">
+            <nav>
+                <ul>
+                    <li><a class="link" href="#">Каталог</a></li>
+                    <li><a class="link" href="#">Отзывы</a></li>
+                    <li><a class="link" href="#">Мобильная версия</a></li>
+                    <li><a class="link" href="#">О компании</a></li>
+                </ul>
+
+                <ul>
+                    <li><a class="link" href="#">Работа для специлистов</a></li>
+                    <li><a class="link" href="#">Партнерская программа</a></li>
+                    <li><a class="link" href="#">Наши специалисты</a></li>
+                </ul>
+            </nav>
+
+            <dl>
+                <dt>Рабочие дни:</dt>
+                <dd><time>
+                        <meta itemprop="openingHours" content="Mo-Su 08:30-20:00">Ежедневно с 8:30 до 20:00
+                    </time></dd>
+
+                <dt>Месторасположение:</dt>
+                <dd>
+                    <address>улица Петра Алексеева, 6,​ 5 офис; 4 этаж Строительный округ, Якутск</address>
+                </dd>
+
+                <dt>Связаться с нами:</dt>
+                <dd><a class="link" href="tel:+79142923088">+7 914 292 30 88</a></dd>
+            </dl>
+
+            <div class="callback">
+                <img class="callback__img" src="./img/whatsapp_icon.svg" alt="whatsapp_icon">
+                <a class="callback__link link" href="#modal">Заказать звонок</a>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
 
 </body>
