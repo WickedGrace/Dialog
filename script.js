@@ -44,3 +44,77 @@ function showNextSlide(direction) {
   nextSlide.classList.remove('hidden');
   nextSlide.setAttribute('data-active', '');
 }
+
+// const sliderImages = document.querySelectorAll('.carousel__img');
+// slider = document.querySelector('#slider');
+// sliderControls = document.querySelectorAll('.carousel__bullets');
+// btnPrev = document.querySelector('#btnPrev');
+// btnNext = document.querySelector('#btnNext');
+
+// let sliderCount = 0;
+
+// function showSlide() {
+//   sliderWidth = document.querySelector('.carousel__img').offsetWidth;
+//   slider.style.width = sliderWidth * sliderImages.length + 'px';
+//   sliderImages.forEach((item) => (item.style.width = sliderWidth + 'px'));
+
+//   rollSlider();
+// }
+
+// showSlide();
+
+// function prevSlide() {
+//   sliderCount--;
+//   sliderCount < 0 ? (sliderCount = sliderImages.length - 1) : null;
+//   rollSlider();
+//   thisSlide(sliderCount);
+// }
+// function nextSlide() {
+//   sliderCount++;
+//   sliderCount >= sliderImages.length ? (sliderCount = 0) : null;
+//   rollSlider();
+//   thisSlide(sliderCount);
+// }
+
+// btnPrev.addEventListener('click', prevSlide);
+// btnNext.addEventListener('click', nextSlide);
+
+// function rollSlider() {
+//   slider.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
+// }
+
+// function thisSlide(index) {
+//   sliderControls.forEach(
+//     (item) => item.classList.remove('.bullet__item--active'),
+//     sliderControls[index].classList.add('.bullet__item--active')
+//   );
+// }
+
+// // sliderControls.forEach(control, (index) => {
+// //   control.addEventListener('click', () => {
+// //     sliderCount = index;
+// //     thisSlide(sliderCount);
+// //     rollSlider();
+// //   });
+// // });
+
+// const slider = document.querySelector('.slider');
+// btnPrev = document.querySelector('#btnPrev');
+// btnNext = document.querySelector('#btnNext');
+// controls = document.querySelectorAll('.bullet__item');
+
+// let position = 0;
+// controlIndex = 0;
+
+// const nextSlide = () => {
+//   position < (controls.length - 1) * 1240 ? (position += 1240) : (position = 0);
+
+//   slider.style.left = position + 'px';
+// };
+// // const nextSlide = () => {
+// //   position += 1440;
+// //   slider.style.left = -position + 'px';
+// // };
+
+// btnNext.addEventListener('click', nextSlide);
+// // btnPrev.addEventListener('click', prevSlide);
