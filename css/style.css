@@ -86,6 +86,14 @@
   display: block;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -364,8 +372,15 @@
   letter-spacing: 0.025em;
 }
 .specialist__info li {
-  list-style-type: '🗸';
+  list-style: none;
   list-style-position: inside;
+}
+.specialist__info li::before {
+  content: '🗸';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
 }
 .specialist__info li:nth-last-child(n + 2) {
   margin-bottom: 30px;
@@ -389,4 +404,45 @@
 .specialist .sign-up {
   float: right;
   margin-bottom: 50px;
+}
+
+.about-wrapper {
+  padding: 75px 0 60px;
+  text-align: justify;
+}
+.about-wrapper .about__text:nth-of-type(2) {
+  padding-bottom: 35px;
+}
+.about-wrapper .about__text:nth-of-type(n + 3):nth-of-type(-n + 5) {
+  padding-bottom: 30px;
+}
+.about-wrapper .about__text:nth-of-type(6) {
+  padding-bottom: 74px;
+}
+.about__subheading {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 110%;
+  letter-spacing: 0.025em;
+  padding-bottom: 35px;
+}
+.about__text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: 0.025em;
+}
+.about__text--wide {
+  line-height: 171%;
+}
+.about__item {
+  list-style: none;
+  display: inline-block;
+}
+.about__item::before {
+  content: '🗸';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
 }

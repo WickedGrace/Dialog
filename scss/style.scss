@@ -98,6 +98,14 @@ $color-text: #000;
   display: block;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
 // header
 
 .header-inner {
@@ -401,8 +409,15 @@ $color-text: #000;
     line-height: 110%;
     letter-spacing: 0.025em;
     li {
-      list-style-type: '🗸';
+      list-style: none;
       list-style-position: inside;
+      &::before {
+        content: '🗸';
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        padding-right: 10px;
+      }
     }
     li:nth-last-child(n + 2) {
       margin-bottom: 30px;
@@ -428,5 +443,48 @@ $color-text: #000;
     @extend %btn-circled-default;
     float: right;
     margin-bottom: 50px;
+  }
+}
+
+.about {
+  &-wrapper {
+    padding: 75px 0 60px;
+    text-align: justify;
+    .about__text:nth-of-type(2) {
+      padding-bottom: 35px;
+    }
+    .about__text:nth-of-type(n + 3):nth-of-type(-n + 5) {
+      padding-bottom: 30px;
+    }
+    .about__text:nth-of-type(6) {
+      padding-bottom: 74px;
+    }
+  }
+  &__subheading {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 110%;
+    letter-spacing: 0.025em;
+    padding-bottom: 35px;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: 0.025em;
+    &--wide {
+      line-height: 171%;
+    }
+  }
+  &__item {
+    list-style: none;
+    display: inline-block;
+  }
+  &__item::before {
+    content: '🗸';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
   }
 }
