@@ -14,11 +14,18 @@
 
 //variables
 
-$color-btn: rgba(69, 69, 69, 0.16);
-$color-bg: rgba(69, 69, 69, 0.16);
-$color-bg-special: #746c9d;
-$color-text-special: #ffffff;
-$color-text: #000;
+$color-bg-primary: rgba(230, 221, 249, 0.77);
+$color-bg-secondary: #746c9d;
+$color-bg-special: #7c1ba9;
+
+$color-text-primary: #000;
+$color-text-secondary: #fff;
+$color-text-special: #3f055a;
+
+$color-btn-primary: #8a5e9e;
+$color-btn-secondary: #473e83;
+
+$color-special: #413c60;
 
 %heading {
   font-weight: 500;
@@ -26,6 +33,7 @@ $color-text: #000;
   line-height: 110%;
   letter-spacing: 0.025em;
   text-align: center;
+  color: $color-bg-special;
 }
 
 %btn {
@@ -35,22 +43,28 @@ $color-text: #000;
   line-height: 110%;
   letter-spacing: 0.025em;
   border-radius: 12px;
+  color: $color-text-secondary;
 }
 
-%btn-circled-s {
+%btn-primary {
+  font-weight: 500;
+  font-size: 15px;
+  background-color: $color-btn-primary;
+  padding: 12px 45px;
+}
+
+%btn-secondary {
   font-weight: 500;
   font-size: 18px;
-  color: #ffffff;
-  background-color: #2d2d2d;
+  background-color: $color-btn-secondary;
   padding: 15px 20px;
 }
 
-%btn-circled-m {
-  font-weight: 500;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: #000;
-  padding: 15px 55px;
+%btn-special {
+  background-color: $color-special;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 //common
@@ -59,9 +73,12 @@ $color-text: #000;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // color: $color-text;
   font-family: Roboto, Arial, sans-serif;
   font-style: normal;
+}
+
+.page {
+  background: #fbf8ff;
 }
 
 .container {
@@ -76,7 +93,7 @@ $color-text: #000;
 
 .link {
   text-decoration: none;
-  color: $color-text;
+  color: $color-text-primary;
 }
 
 .link,
@@ -154,17 +171,14 @@ $color-text: #000;
 
 .header-wrapper {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 16px 0;
   .menu {
-    &-wrapper {
-      margin: 0 65px;
-    }
     &__list {
       display: flex;
-      white-space: nowrap;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 15px;
       line-height: 110%;
       letter-spacing: 0.025em;
       gap: 65px;
@@ -174,17 +188,11 @@ $color-text: #000;
     display: flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
     &__img {
       margin-right: 10px;
     }
     &__link {
-      @extend %btn;
-      font-size: 18px;
-      font-weight: 400;
-      padding: 10px 13px;
-      background-color: #000;
-      color: #fff;
+      @extend %btn, %btn-special;
     }
   }
 }
@@ -192,7 +200,7 @@ $color-text: #000;
 //hero
 
 .hero {
-  background-color: $color-bg;
+  background-color: $color-bg-primary;
   &-wrapper {
     background: url(../img/hero_illustration.png) no-repeat;
     background-position: right bottom;
@@ -204,17 +212,18 @@ $color-text: #000;
   &__content {
     display: flex;
     flex-direction: column;
+    color: #00233d;
     gap: 48px;
   }
   &__heading {
     font-weight: 500;
-    font-size: 48px;
-    line-height: 50%;
+    font-size: 36px;
+    line-height: 67%;
   }
   &__subheading {
     font-weight: 300;
-    font-size: 36px;
-    line-height: 118%;
+    font-size: 32px;
+    line-height: 133%;
     letter-spacing: -1px;
   }
 }
@@ -223,30 +232,29 @@ $color-text: #000;
 
 .sellout {
   background-color: $color-bg-special;
-  color: $color-text-special;
+  color: $color-text-secondary;
   &-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 22px 0;
+    padding: 21px 0;
+  }
+  &__content {
+    letter-spacing: 0.5px;
   }
   &__heading {
     font-weight: 600;
-    font-size: 64px;
+    font-size: 40px;
+    margin-bottom: 27px;
     line-height: 110%;
-    letter-spacing: 0.5px;
-    margin-bottom: 48px;
   }
   &__subheading {
     font-weight: 500;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 110%;
-    letter-spacing: 0.5px;
   }
-  .paragraph {
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 110%;
-    letter-spacing: 0.5px;
+  &__img {
+    max-width: 180px;
+    max-height: 180px;
   }
 }
 
@@ -254,7 +262,7 @@ $color-text: #000;
 
 .benefits {
   &-wrapper {
-    padding: 80px 0 74px;
+    padding: 130px 0;
   }
   &__list {
     display: flex;
@@ -299,15 +307,15 @@ $color-text: #000;
     line-height: 110.52%;
     letter-spacing: 0.025em;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 20px;
   }
   &-wrapper {
     display: flex;
     flex-direction: column;
-    padding-bottom: 72px;
+    padding-bottom: 120px;
   }
   &-inner {
-    padding-bottom: 72px;
+    padding-bottom: 74px;
   }
   &__cards {
     display: flex;
@@ -316,14 +324,16 @@ $color-text: #000;
     gap: 16px;
   }
   .cards-inner {
-    padding-bottom: 72px;
+    padding-bottom: 157px;
   }
   .service {
     display: flex;
     flex-direction: column;
+    height: 100%;
     &__img {
       order: 1;
       margin-bottom: 20px;
+      border-radius: 50%;
     }
     &__title {
       order: 2;
@@ -334,19 +344,16 @@ $color-text: #000;
       margin-bottom: 56px;
     }
     &__link {
+      @extend %btn, %btn-primary;
       order: 4;
       align-self: self-end;
-      background-color: #616161;
-      @extend %btn-circled-m;
-      @extend %btn;
     }
   }
   &__more.link {
+    @extend %btn, %btn-secondary;
     align-self: flex-end;
     background-color: $color-bg-special;
     border-radius: 12px;
-    @extend %btn-circled-s;
-    @extend %btn;
     text-align: center;
   }
 }
@@ -386,8 +393,8 @@ $color-text: #000;
     background: url(../img/arrow_next.svg) no-repeat;
   }
   &__more {
-    @extend %btn-circled-s;
-    @extend %btn;
+    @extend %btn, %btn-secondary;
+    background-color: $color-btn-primary;
     position: absolute;
     right: 24px;
     bottom: 24px;
@@ -412,7 +419,7 @@ $color-text: #000;
 }
 
 .profile {
-  background-color: $color-bg;
+  background-color: $color-bg-primary;
   border-radius: 50px;
   &__heading {
     padding-top: 45px;
@@ -469,12 +476,7 @@ $color-text: #000;
     margin-top: 48px;
   }
   .sign-up {
-    @extend %btn;
-    padding: 15px 20px;
-    color: #ffffff;
-    background-color: #000;
-    font-weight: 400;
-    font-size: 24px;
+    @extend %btn, %btn-secondary;
     float: right;
     margin-top: 72px;
   }
@@ -578,7 +580,7 @@ $color-text: #000;
       justify-content: center;
       display: flex;
       border-radius: 90px;
-      background: #545454;
+      background-color: $color-bg-primary;
       font-weight: 300;
       font-size: 20px;
       line-height: 110%;
@@ -642,7 +644,7 @@ $color-text: #000;
 }
 
 .footer {
-  background: #545454;
+  background-color: $color-special;
   color: #fff;
   a {
     color: #fff;
