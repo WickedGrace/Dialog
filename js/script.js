@@ -1,10 +1,9 @@
 //blog slider
 
 $(document).ready(function () {
-  $('.blog__list').slick({
+  $('.articles__list').slick({
     dots: true,
-    speed: 300,
-    fade: true,
+    speed: 500,
     cssEase: 'linear',
     adaptiveHeight: true,
   });
