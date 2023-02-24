@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.header-wrapper .callback__link {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 110%;
+  letter-spacing: 0.025em;
+  border-radius: 12px;
+  color: #fff; }
+
+.header-wrapper .callback__link {
+  background-color: #413c60;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 400; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal; }
+
+.page {
+  background: #fbf8ff; }
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 50px; }
+
+.visually-hidden {
+  display: none; }
+
+.link {
+  text-decoration: none;
+  color: #000; }
+
+.link,
+.btn {
+  cursor: pointer; }
+
+.paragraph {
+  display: block; }
+
+.list {
+  list-style: none; }
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0; }
+  .header-wrapper .menu__list {
+    display: flex;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.025em;
+    gap: 65px; }
+  .header-wrapper .callback {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header-wrapper .callback__img {
+      margin-right: 10px; }
+
+.footer {
+  background-color: #413c60;
+  color: #fff; }
+  .footer a {
+    color: #fff; }
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 24px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: 0.025em; }
+  .footer__menu {
+    display: flex;
+    width: 100%; }
+  .footer .menu__list {
+    width: 35%;
+    padding-right: 15px; }
+    .footer .menu__list:not(:first-child) {
+      border-left: 1px solid #fff;
+      padding-left: 24px;
+      padding-top: 56px; }
+  .footer .menu__item {
+    display: flex;
+    gap: 20px;
+    align-items: center; }
+    .footer .menu__item:not(:last-child) {
+      margin-bottom: 20px; }
+  .footer__social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start; }
+
+.info {
+  background: url(../img/404/404-kid-covering-mouth.jpg) no-repeat;
+  background-size: contain;
+  background-position: left;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 60px;
+  align-items: center; }
+
+.text {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center; }
+  .text .paragraph {
+    display: block; }
+
+.redirect-link {
+  text-decoration: none;
+  color: #3392c7; }
+
+/*# sourceMappingURL=style.css.map */
