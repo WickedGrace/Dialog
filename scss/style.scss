@@ -57,12 +57,12 @@ $color-special: #413c60;
   font-weight: 500;
   font-size: 18px;
   background-color: $color-btn-secondary;
-  // padding: 15px 20px;
 }
 
 %btn-special {
   background-color: $color-special;
-  padding: 0 25px;
+  color: #fff;
+  padding: 12px 26px;
   font-size: 15px;
   font-weight: 400;
 }
@@ -163,7 +163,9 @@ $color-special: #413c60;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  white-space: nowrap;
+  padding: 16px 67px;
+  gap: 65px;
   .menu {
     &__list {
       display: flex;
@@ -171,76 +173,37 @@ $color-special: #413c60;
       font-size: 15px;
       line-height: 110%;
       letter-spacing: 0.025em;
-      gap: 55px;
+      gap: 65px;
     }
     &__link {
-      padding: 10px;
-      transition: 0.5s;
-    }
-    &__link:hover {
-      background-color: #473e83;
-      color: $color-text-secondary;
       border-radius: 12px;
+    }
+    &__item {
+      transition: 0.3s;
+      &:hover {
+        display: block;
+        transform: scale(1.2);
+      }
     }
   }
   .callback {
+    @extend %btn, %btn-special;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+      background-color: #7c1ba9;
+    }
     &__img {
-      margin-right: 20px;
+      margin-right: 12px;
+      width: 16px;
+      height: 16px;
     }
     &__link {
       order: 1;
-      opacity: 1;
-      outline: 0;
-      white-space: nowrap;
-      color: $color-text-secondary;
-      line-height: 40px;
-      position: relative;
-      letter-spacing: 1px;
-      display: inline-block;
-      text-transform: uppercase;
-
-      &:hover {
-        &:after {
-          opacity: 1;
-          transform: translateY(0) rotateX(0);
-        }
-
-        &:before {
-          opacity: 0;
-          transform: translateY(50%) rotateX(90deg);
-        }
-      }
-
-      &:after {
-        @extend %btn;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        display: block;
-        line-height: 40px;
-        transition: 0.5s;
-        padding: 0 25px;
-        background: $color-bg-secondary;
-        position: absolute;
-        content: attr(data-front);
-        transform: translateY(-50%) rotateX(90deg);
-      }
-
-      &:before {
-        @extend %btn, %btn-special;
-        top: 0;
-        left: 0;
-        opacity: 1;
-        display: block;
-        line-height: 40px;
-        transition: 0.5s;
-        position: relative;
-        content: attr(data-back);
-        transform: translateY(0) rotateX(0);
-      }
+      color: #fff;
     }
   }
 }
@@ -255,7 +218,7 @@ $color-special: #413c60;
     min-height: 565px;
   }
   &-inner {
-    padding: 134px 0 0 94px;
+    padding: 241px 0 0 98px;
   }
   &__content {
     display: flex;
@@ -284,7 +247,7 @@ $color-special: #413c60;
   &-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 21px 0;
+    padding: 21px 209px 21px 0;
   }
   &__content {
     letter-spacing: 0.5px;
@@ -314,7 +277,7 @@ $color-special: #413c60;
   }
   &__list {
     display: flex;
-    gap: 135px;
+    gap: 125px;
   }
   .benefit {
     display: flex;
@@ -336,7 +299,7 @@ $color-special: #413c60;
     &__desc {
       order: 3;
       font-weight: 300;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 130%;
       letter-spacing: 0.5px;
     }
@@ -381,11 +344,34 @@ $color-special: #413c60;
     align-items: center;
     justify-content: center;
     height: 100%;
+
     &__item {
       max-width: 300px;
+
+      &:not(:last-child) {
+        margin-right: 45px;
+      }
+      &:hover .card__top {
+        background: #8a5e9e;
+      }
+      &:hover .card__img {
+        opacity: 0.5;
+      }
+      &:hover .card__price {
+        opacity: 1;
+      }
     }
-    &__item:not(:last-child) {
-      margin-right: 45px;
+    &__top {
+      position: relative;
+      height: auto;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    &__img {
+      border-radius: 50%;
+      display: block;
+      height: auto;
+      transition: 0.3s;
     }
     &__content {
       display: flex;
@@ -401,39 +387,17 @@ $color-special: #413c60;
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
-      transition: 1s;
-    }
-    &__top {
-      position: relative;
-      transition: 0.5s;
-    }
-    &__img:hover {
-      opacity: 0.5;
-    }
-    &__top:hover {
-      height: auto;
-      border-radius: 50%;
-      background: #8a5e9e;
-    }
-    &__top:hover .card__price {
-      opacity: 1;
-    }
-    &__img {
-      border-radius: 50%;
-      display: block;
-      height: auto;
+      transition: 0.3s;
+      margin-bottom: 56px;
     }
     &__title {
       margin: 24px 0 36px;
-    }
-    &__price {
-      margin-bottom: 56px;
     }
     &__link {
       @extend %btn, %btn-primary;
       margin-top: auto;
       align-self: center;
-      transition: 0.5s;
+      transition: 0.3s;
       &:hover {
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
         background-color: #b876d7;
