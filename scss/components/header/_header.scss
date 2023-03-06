@@ -1,0 +1,37 @@
+.header {
+  &-wrapper {
+    @extend %row--alighned;
+
+    @include adaptive-value(padding-top, 16, 12, standard);
+    @include adaptive-value(padding-bottom, 16, 12, standard);
+    @include adaptive-value(column-gap, 65, 32, md-laptop);
+
+    justify-content: space-between;
+    white-space: nowrap;
+  }
+
+  .logo__img {
+    @include adaptive-value(width, 119, 95, md-tablet);
+    @include adaptive-value(height, 40, 35, md-tablet);
+  }
+
+  .menu {
+    &__list {
+      @extend %typography--default;
+      @extend %row--alighned;
+
+      @include adaptive-value(font-size, 15, 12, md-tablet);
+      @include adaptive-value(column-gap, 65, 32, md-laptop);
+
+      justify-content: space-between;
+
+      font-weight: 400;
+    }
+    &__item {
+      &:hover {
+        display: block;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

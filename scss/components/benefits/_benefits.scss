@@ -1,0 +1,45 @@
+.benefits {
+  &-wrapper {
+    @include adaptive-value(padding-top, 130, 34, standard);
+    @include adaptive-value(padding-bottom, 130, 34, standard);
+  }
+  &__list {
+    @include adaptive-value(column-gap, 125, 20, standard-tablet);
+
+    display: flex;
+  }
+
+  .benefit {
+    @include adaptive-value(column-gap, 24%, 50%, standard);
+
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      @include adaptive-value(font-size, 20, 13, standard);
+
+      order: 2;
+      font-weight: 600;
+      line-height: 118%;
+      letter-spacing: 0.031em;
+      margin-bottom: 10px;
+    }
+
+    &__img {
+      @include adaptive-value(width, 50, 20, standard);
+      @include adaptive-value(height, 50, 20, standard);
+
+      order: 1;
+      margin-bottom: 10px;
+    }
+
+    &__desc {
+      @include adaptive-value(font-size, 16, 10, standard);
+
+      order: 3;
+      font-weight: 300;
+      line-height: 130%;
+      letter-spacing: 0.031em;
+    }
+  }
+}

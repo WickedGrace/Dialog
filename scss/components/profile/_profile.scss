@@ -1,0 +1,88 @@
+.profile {
+  background-color: $color-bg-primary;
+
+  border-radius: 50px;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include adaptive-value(padding-top, 24, 8, standard);
+    @include adaptive-value(padding-bottom, 24, 8, standard);
+  }
+
+  &-inner {
+    @include adaptive-value(column-gap, 50, 10, standard);
+
+    display: flex;
+
+    @include adaptive-value(padding-top, 50, 16, standard);
+    @include adaptive-value(padding-bottom, 24, 16, standard);
+    @include adaptive-value(padding-left, 50, 8, standard);
+    @include adaptive-value(padding-right, 50, 8, standard);
+  }
+
+  &__heading {
+    @extend %heading;
+  }
+
+  &__img {
+    align-self: start;
+
+    max-width: 40%;
+  }
+
+  &__name {
+    @include adaptive-value(font-size, 32, 12, standard);
+
+    text-align: left;
+
+    font-weight: 300;
+  }
+
+  &__specialty {
+    @extend %typography--default;
+
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  &__name,
+  &__specialty,
+  .bio__item:nth-last-child(n + 2) {
+    margin-bottom: 32px;
+  }
+
+  &__bio {
+    @extend %typography--default;
+
+    @include adaptive-value(font-size, 20, 10, standard);
+
+    font-weight: 200;
+
+    .accent {
+      text-decoration: underline;
+    }
+  }
+
+  .bio__item {
+    list-style-position: inside;
+
+    &::before {
+      content: '✧';
+      display: inline-block;
+
+      width: 25px;
+    }
+  }
+
+  .sign-up {
+    @extend %btn, %btn-secondary;
+
+    @include adaptive-value(font-size, 24, 8, standard);
+
+    align-self: self-end;
+
+    font-weight: 400;
+  }
+}

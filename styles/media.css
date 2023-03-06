@@ -1,0 +1,6 @@
+@media (max-width: 1024px) {
+  .header .callback {
+    display: none; } }
+@media (max-width: 1023.8px) {
+  .hero .callback {
+    display: block; } }

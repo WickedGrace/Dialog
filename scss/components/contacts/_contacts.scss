@@ -1,0 +1,42 @@
+.contacts {
+  &__heading {
+    @extend %heading;
+
+    @include adaptive-value(margin-bottom, 80, 16, standard);
+  }
+
+  &-wrapper {
+    @include adaptive-value(padding-top, 104, 56, standard);
+    @include adaptive-value(padding-bottom, 50, 6, standard);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    column-gap: 10%;
+  }
+
+  &__list {
+    @extend %typography--default;
+
+    @include adaptive-value(font-size, 32, 12, standard);
+
+    font-weight: 300;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__social-media {
+    @extend %row--alighned;
+
+    gap: 58px;
+  }
+
+  .social-media__item img {
+    @include adaptive-value(width, 55, 25, standard);
+    @include adaptive-value(height, 55, 25, standard);
+  }
+}

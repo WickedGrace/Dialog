@@ -1,0 +1,123 @@
+.about {
+  &__heading {
+    @extend %heading;
+    margin-bottom: 48px;
+  }
+
+  &-wrapper {
+    @include adaptive-value(padding-top, 76, 24, standard);
+    @include adaptive-value(padding-bottom, 232, 56, standard);
+  }
+
+  &__category:first-child {
+    display: flex;
+
+    column-gap: 40px;
+
+    .about-inner {
+      @extend %row--alighned;
+
+      flex-direction: column;
+      align-self: center;
+      background: $color-btn-secondary;
+
+      border-radius: 20px;
+      transform: rotate(4deg);
+      margin-left: 50px;
+
+      .holder {
+        @include adaptive-value(padding-top, 32, 10, standard);
+        @include adaptive-value(padding-bottom, 32, 10, standard);
+        @include adaptive-value(padding-left, 32, 10, standard);
+        @include adaptive-value(padding-right, 32, 10, standard);
+
+        background: #bde5dd;
+        border-radius: 20px;
+        transform: rotate(-4deg);
+
+        .accent {
+          color: $color-text-special;
+
+          font-weight: 400;
+        }
+      }
+    }
+
+    .about__text {
+      @include adaptive-value(font-size, 26, 13, standard);
+
+      font-weight: 200;
+    }
+  }
+
+  &__category:nth-child(2) {
+    @include adaptive-value(padding-top, 100, 48, standard);
+    @include adaptive-value(padding-right, 95, 8, standard);
+    @include adaptive-value(padding-bottom, 120, 48, standard);
+
+    .about-inner {
+      @include adaptive-value(column-gap, 150, 14, standard);
+
+      display: flex;
+    }
+
+    .about__text {
+      @include adaptive-value(font-size, 20, 10, standard);
+
+      font-weight: 200;
+
+      .accent {
+        text-decoration: underline;
+      }
+    }
+
+    .about__text:not(:last-of-type) {
+      @include adaptive-value(margin-bottom, 32, 8, standard);
+    }
+
+    .about__img {
+      align-self: start;
+    }
+  }
+
+  &__category:last-child {
+    .about {
+      &__text {
+        @include adaptive-value(margin-bottom, 32, 8, standard);
+
+        font-weight: 200;
+        line-height: 171%;
+        margin-bottom: 32px;
+      }
+
+      &__list {
+        @include adaptive-value(column-gap, 166, 20, standard-mobile);
+        @include adaptive-value(row-gap, 150, 48, standard-mobile);
+
+        display: grid;
+        align-self: center;
+
+        grid-template-columns: minmax(170px, 1fr) minmax(170px, 1fr);
+      }
+
+      &__item {
+        @include adaptive-value(font-size, 20, 10, standard);
+
+        font-weight: 200;
+        line-height: 171%;
+        max-width: 100%;
+
+        .about__img {
+          width: 100%;
+        }
+
+        .about__desc::before {
+          content: '✧';
+          display: inline-block;
+
+          width: 25px;
+        }
+      }
+    }
+  }
+}

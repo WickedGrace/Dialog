@@ -15,7 +15,7 @@ $(document).ready(function () {
   $('.reviews__list').slick({
     dots: true,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     adaptiveHeight: true,
   });
