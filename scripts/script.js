@@ -1,4 +1,13 @@
-//blog slider
+//burger menu
+
+$(document).ready(function () {
+  $('.header__burger').click(function (event) {
+    $('.header__burger, .menu').toggleClass('active');
+    $('.page').toggleClass('lock');
+  });
+});
+
+//articles slider
 
 $(document).ready(function () {
   $('.articles__list').slick({

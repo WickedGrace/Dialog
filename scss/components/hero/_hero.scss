@@ -1,17 +1,22 @@
 .hero {
   background-color: $color-bg-primary;
 
+  &-wrapper {
+    padding-top: 100px;
+  }
+
   &-inner {
     @include adaptive-value(padding-top, 0, 26, standard);
-    @include adaptive-value(padding-left, 98, 30, standard);
 
     display: flex;
     justify-content: space-between;
+
+    padding-left: 50px;
   }
 
   &__content {
-    @include adaptive-value(row-gap, 48, 4, standard);
     @include adaptive-value(margin-right, 0, 34, standard);
+    @include adaptive-value(margin-bottom, 70, 24, standard);
 
     display: flex;
     flex-direction: column;
@@ -21,13 +26,17 @@
 
   &__heading {
     @include adaptive-value(font-size, 36, 18, standard);
+    @include adaptive-value(margin-bottom, 48, 4, standard);
+
+    white-space: nowrap;
 
     font-weight: 500;
     line-height: 67%;
   }
+
   &__subheading {
     @include adaptive-value(font-size, 32, 15, standard);
-    @include adaptive-value(margin-bottom, 121, 8, standard);
+    @include adaptive-value(margin-bottom, 28, 8, standard);
 
     font-weight: 300;
     line-height: 133%;
@@ -35,11 +44,11 @@
   }
 
   &__img {
-    @include adaptive-value(width, 690, 300, standard);
-    @include adaptive-value(height, 525, 215, standard);
+    overflow: hidden;
   }
 
   .callback {
+    align-self: start;
     display: none;
   }
 }

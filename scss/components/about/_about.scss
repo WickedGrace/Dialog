@@ -11,6 +11,7 @@
 
   &__category:first-child {
     display: flex;
+    overflow: hidden;
 
     column-gap: 40px;
 
@@ -77,6 +78,7 @@
 
     .about__img {
       align-self: start;
+      overflow: hidden;
     }
   }
 

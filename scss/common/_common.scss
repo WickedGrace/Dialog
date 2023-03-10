@@ -25,6 +25,10 @@
   background: $color-bg-body;
 }
 
+.wrapper {
+  max-width: 1440px;
+}
+
 .container {
   @include adaptive-value(padding-left, 50, 30, standard);
   @include adaptive-value(padding-right, 50, 30, standard);
@@ -34,9 +38,9 @@
 }
 
 .container--md {
-  // @include adaptive-value(padding-left, 120, 70, md);
-  // @include adaptive-value(padding-right, 120, 70, md);
-  padding: 0 70px;
+  @include adaptive-value(padding-left, 70, 50, md);
+  @include adaptive-value(padding-right, 70, 50, md);
+  // padding: 0 70px;
 
   max-width: 1300px;
 }
@@ -71,6 +75,9 @@
 
 .callback {
   @extend %btn, %btn-special;
+
+  position: relative;
+  z-index: 2;
 
   &__img {
     @include adaptive-value(margin-right, 12, 6, standard);

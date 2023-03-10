@@ -5,15 +5,19 @@
   &-wrapper {
     @extend %row--alighned;
 
-    @include adaptive-value(padding-top, 21, 16, standard);
-    @include adaptive-value(padding-right, 209, 30, standard);
-    @include adaptive-value(padding-bottom, 21, 16, standard);
+    @include adaptive-value(padding-top, 21, 32, standard);
+    @include adaptive-value(padding-right, 230, 30, standard);
+    @include adaptive-value(padding-bottom, 21, 32, standard);
 
     justify-content: space-between;
   }
 
   &__content {
     letter-spacing: 0.031em;
+
+    .paragraph {
+      display: inline;
+    }
   }
   &__heading {
     @extend %typography--default;

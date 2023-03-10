@@ -1,18 +1,48 @@
 .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: $color-bg-special;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__burger {
+    display: none;
+  }
+
   &-wrapper {
     @extend %row--alighned;
 
     @include adaptive-value(padding-top, 16, 12, standard);
     @include adaptive-value(padding-bottom, 16, 12, standard);
-    @include adaptive-value(column-gap, 65, 32, md-laptop);
+    @include adaptive-value(column-gap, 65, 0, standard);
 
     justify-content: space-between;
     white-space: nowrap;
+    position: relative;
   }
 
   .logo__img {
-    @include adaptive-value(width, 119, 95, md-tablet);
-    @include adaptive-value(height, 40, 35, md-tablet);
+    @include adaptive-value(width, 119, 80, standard);
+    @include adaptive-value(height, 40, 30, standard);
+
+    display: flex;
+    justify-self: center;
+    position: relative;
+
+    // max-width: 100%;
+    z-index: 3;
   }
 
   .menu {
@@ -20,12 +50,15 @@
       @extend %typography--default;
       @extend %row--alighned;
 
-      @include adaptive-value(font-size, 15, 12, md-tablet);
-      @include adaptive-value(column-gap, 65, 32, md-laptop);
+      @include adaptive-value(font-size, 15, 12, standard);
+      column-gap: 32px;
+      // @include adaptive-value(column-gap, 65, 0, standard);
 
       justify-content: space-between;
+      position: relative;
 
       font-weight: 400;
+      z-index: 2;
     }
     &__item {
       &:hover {
