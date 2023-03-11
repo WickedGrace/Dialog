@@ -180,3 +180,22 @@
     padding: 0; }
   .sellout__content .paragraph {
     display: block; } }
+@media (max-width: 768px) {
+  .benefits__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px; }
+  .benefits .benefit {
+    width: 40%; } }
+@media (max-width: 505px) {
+  .benefits__list {
+    gap: 30px; } }
+@media (max-width: 425px) {
+  .benefits .container {
+    padding: 30px; }
+  .benefits-wrapper {
+    padding: 0; }
+  .benefits__list {
+    gap: 20px; }
+  .benefits .benefit:last-child {
+    margin: 0 auto; } }

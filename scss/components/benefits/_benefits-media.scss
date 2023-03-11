@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  .benefits {
+    &__list {
+      flex-wrap: wrap;
+
+      gap: 50px;
+    }
+    .benefit {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 505px) {
+  .benefits {
+    &__list {
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .benefits {
+    .container {
+      padding: 30px;
+    }
+
+    &-wrapper {
+      padding: 0;
+    }
+
+    &__list {
+      gap: 20px;
+    }
+
+    .benefit:last-child {
+      margin: 0 auto;
+    }
+  }
+}

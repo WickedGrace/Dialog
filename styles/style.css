@@ -570,11 +570,10 @@ table {
   display: flex; }
   @media (max-width: 1440px) {
     .benefits__list {
-      -webkit-column-gap: calc( 20px + 105 * ((100vw - 768px) / 672) );
-              column-gap: calc( 20px + 105 * ((100vw - 768px) / 672) ); } }
+      -webkit-column-gap: calc( -20px + 145 * ((100vw - 320px) / 1120) );
+              column-gap: calc( -20px + 145 * ((100vw - 320px) / 1120) ); } }
 .benefits .benefit {
-  -webkit-column-gap: 24%px;
-          column-gap: 24%px;
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,10 +581,6 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media (max-width: 1440px) {
-    .benefits .benefit {
-      -webkit-column-gap: calc( 50%px + -26% * ((100vw - 320px) / 1120) );
-              column-gap: calc( 50%px + -26% * ((100vw - 320px) / 1120) ); } }
   .benefits .benefit__title {
     font-size: 20px;
     -webkit-box-ordinal-group: 3;

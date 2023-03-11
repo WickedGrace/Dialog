@@ -4,13 +4,13 @@
     @include adaptive-value(padding-bottom, 130, 34, standard);
   }
   &__list {
-    @include adaptive-value(column-gap, 125, 20, standard-tablet);
+    @include adaptive-value(column-gap, 125, -20, standard);
 
     display: flex;
   }
 
   .benefit {
-    @include adaptive-value(column-gap, 24%, 50%, standard);
+    width: 25%;
 
     display: flex;
     flex-direction: column;
