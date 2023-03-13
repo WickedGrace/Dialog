@@ -669,6 +669,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   min-width: 0;
+  margin: 0 auto;
   padding-bottom: 157px; }
   @media (max-width: 1440px) {
     .services .cards {
@@ -831,7 +832,8 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  padding: 0 15px; }
 .articles .article__title {
   padding: 13px;
   font-size: 24px;
@@ -1173,7 +1175,8 @@ html {
           flex-direction: column; }
 .reviews .review__item {
   background-color: rgba(230, 221, 249, 0.77);
-  border-radius: 90px; }
+  border-radius: 90px;
+  padding: 0 15px; }
   .reviews .review__item .item-inner {
     padding-top: 96px;
     padding-bottom: 96px;

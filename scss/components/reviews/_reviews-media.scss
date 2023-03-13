@@ -1,3 +1,11 @@
+@media (min-width: 1441px) {
+  .reviews {
+    &-inner {
+      margin-top: -37px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .reviews {
     .container--s {

@@ -45,6 +45,7 @@
       background-color: $color-bg-primary;
 
       border-radius: 90px;
+      padding: 0 15px;
 
       .item-inner {
         @extend %row--alighned;
