@@ -17,7 +17,7 @@
 <body class="page">
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="container--md">
                 <div class="header-wrapper">
                     <a class="logo">
                         <img class="logo__img" src="./img/header/Dialog.png" alt="logo">
@@ -29,7 +29,7 @@
                         <div class="menu-wrapper">
                             <ul class="menu__list list">
                                 <li class="menu__item">
-                                    <a class="menu__link link" href="#">О нас</a>
+                                    <a class="menu__link link" href="#about">О нас</a>
                                 </li>
                                 <li class="menu__item">
                                     <a class="menu__link link" href="#">Каталог</a>
@@ -38,10 +38,10 @@
                                     <a class="menu__link link" href="#">Записаться онлайн</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link link" href="#">Контакты</a>
+                                    <a class="menu__link link" href="#contacts">Контакты</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link link" href="#">Отзывы</a>
+                                    <a class="menu__link link" href="#reviews">Отзывы</a>
                                 </li>
                                 <li class="menu__item">
                                     <a class="menu__link link" href="#">Статьи</a>
@@ -234,10 +234,9 @@
                         <h2 class="profile__heading">Наш лучший специалист</h2>
                         <div class="profile-inner">
                             <img class="profile__img" src="./img/profile/profile-photo.png" alt="profile-photo">
-                            <div>
-                                <p class="profile__name">Жиркова Светлана Николаевна</p>
+                            <div class="holder">
+                                <p class="profile__name">Жиркова Светлана <span class="paragraph">Николаевна</span></p>
                                 <p class="profile__specialty">Логопед частной практики</p>
-
                                 <ul class="profile__bio list">
                                     <li class="bio__item">высшее педагогическое образование, я закончила в 1985 году
                                         дефектологический факультет Свердловского государственного педагогического
@@ -278,7 +277,7 @@
                 </div>
             </section>
 
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <div class="about-wrapper">
                         <div class="about__category">
@@ -300,6 +299,8 @@
                         <div class="about__category">
                             <h3 class="about__heading">Сколько нужно занятий?</h3>
                             <div class="about-inner">
+                                <img class="about__img" src="./img/about/about-teacher-and-patient-mirror.jpg"
+                                    alt="teacher-and-patient-in-front-of-the-mirror">
                                 <div class="holder">
                                     <p class="about__text">Часто родители задают вопрос об общем количестве занятий,
                                         сколько
@@ -344,8 +345,6 @@
                                         определенных моментов занятия, посылаю родителям как видеоотчет и возможность
                                         закрепления в домашних условиях.</p>
                                 </div>
-                                <img class="about__img" src="./img/about/about-teacher-and-patient-mirror.jpg"
-                                    alt="teacher-and-patient-in-front-of-the-mirror">
                             </div>
                         </div>
 
@@ -423,7 +422,7 @@
             </section>
 
 
-            <section class="reviews">
+            <section class="reviews" id="reviews">
                 <div class="container--s">
                     <div class="reviews-wrapper">
                         <h2 class="reviews__heading">Почитайте <span class="accent">отзывы</span> о нашей работе!
@@ -516,7 +515,7 @@
                 </div>
             </section>
 
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <div class="container">
                     <div class="contacts-wrapper">
                         <h2 class="contacts__heading">Контакты</h2>
@@ -597,17 +596,17 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <img class="img" src="./img/footer/phone.svg" alt="phone">
-                                <a class="link" href="tel:+79142923088">+7 914 292 30 88</a>
+                                <img class="menu__icon" src="./img/footer/phone.svg" alt="phone">
+                                <a class="menu__link link" href="tel:+79142923088">+7 914 292 30 88</a>
                             </li>
                             <li class="menu__item">
-                                <img class="img" src="./img/footer/clocks.svg" alt="clocks">
+                                <img class="menu__icon" src="./img/footer/clocks.svg" alt="clocks">
                                 <time>
                                     <meta itemprop="openingHours" content="08:30-20:00">с 8:30 до 20:00
                                 </time>
                             </li>
                             <li class="menu__item">
-                                <img class="img" src="./img/footer/mail.svg" alt="mail">
+                                <img class="menu__icon" src="./img/footer/mail.svg" alt="mail">
                                 <a class="link" href="mailto:">dialogdialog@company.com</a>
                             </li>
                         </ul>
@@ -625,19 +624,22 @@
                     <dl class="menu__list">
                         <dt>Адрес нашего офиса:</dt>
                         <dd>
-                            <adress>г. Якутск, <span class="paragraph">улица Петра Алексеева,</span><span
-                                    class="paragraph"> 6, офис 5, этаж
-                                    4.</span></adress>
+                            <adress>г. Якутск, улица Петра Алексеева,
+                                <span class="paragraph">6, офис 5, этаж
+                                    4.</span>
+                            </adress>
                         </dd>
                         <ul class="footer__social-media list">
                             <li class="social-media__item">
-                                <a class="link" href="#">
-                                    <img class="img1" src="./img/footer/vk-logo-white.svg" alt="vk-logo">
+                                <a class="social-media__link link" href="#">
+                                    <img class="social-media__logo link" src="./img/footer/vk-logo-white.svg"
+                                        alt="vk-logo">
                                 </a>
                             </li>
                             <li class="social-media__item">
-                                <a class="link" href="#">
-                                    <img class="img1" src="./img/footer/wa-logo-white.svg" alt="whatsapp-icon">
+                                <a class="social-media__link link" href="#">
+                                    <img class="social-media__logo" src="./img/footer/wa-logo-white.svg"
+                                        alt="whatsapp-icon">
                                 </a>
                             </li>
                         </ul>
