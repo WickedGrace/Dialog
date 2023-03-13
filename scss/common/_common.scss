@@ -21,12 +21,20 @@
   transition: 0.5s;
 }
 
+html {
+  height: 100%;
+}
+
 .page {
   background: $color-bg-body;
+
+  flex: 1 0 auto;
 }
 
 .wrapper {
-  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .container {
@@ -38,16 +46,17 @@
 }
 
 .container--md {
-  @include adaptive-value(padding-left, 70, 50, md);
-  @include adaptive-value(padding-right, 70, 50, md);
-  // padding: 0 70px;
+  @include adaptive-value(padding-left, 70, 50, md-tablet);
+  @include adaptive-value(padding-right, 70, 50, md-tablet);
 
   max-width: 1300px;
+  margin: 0 auto;
 }
 
 .container--s {
   max-width: 1055px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .row {
@@ -92,7 +101,9 @@
 
 .slick-slider {
   @extend %row--alighned;
+}
 
+.slick-list {
   overflow: hidden;
 }
 

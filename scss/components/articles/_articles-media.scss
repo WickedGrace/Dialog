@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+  .articles {
+    &__heading {
+      &::before,
+      &::after {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .articles {
+    &__heading {
+      &::before,
+      &::after {
+        width: 20%;
+      }
+    }
+  }
+}

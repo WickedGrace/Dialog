@@ -7,6 +7,38 @@ $(document).ready(function () {
   });
 });
 
+//menu scroll
+
+$('a[href*="#"]').on('click', function (e) {
+  e.preventDefault();
+
+  $('html, body').animate(
+    {
+      scrollTop: $($(this).attr('href')).offset().top,
+    },
+    700,
+    'linear'
+  );
+});
+
+//services slider
+
+// $(document).ready(function () {
+//   $('.cards').slick({
+//     dots: false,
+//     speed: 500,
+//     cssEase: 'linear',
+//     variableWidth: true,
+//     // mobileFirst: true,
+//     responsive: [
+//       {
+//         breakpoint: 665,
+//         settings: 'unslick',
+//       },
+//     ],
+//   });
+// });
+
 //articles slider
 
 $(document).ready(function () {
@@ -15,6 +47,7 @@ $(document).ready(function () {
     speed: 500,
     cssEase: 'linear',
     adaptiveHeight: true,
+    variableWidth: true,
   });
 });
 
@@ -27,5 +60,6 @@ $(document).ready(function () {
     autoplay: false,
     autoplaySpeed: 5000,
     adaptiveHeight: true,
+    variableWidth: true,
   });
 });

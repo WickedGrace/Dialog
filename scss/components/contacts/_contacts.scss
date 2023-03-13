@@ -13,8 +13,6 @@
   &__info {
     display: flex;
     justify-content: space-between;
-
-    column-gap: 10%;
   }
 
   &__list {
@@ -26,7 +24,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 30px;
+    @include adaptive-value(margin-bottom, 48, 16, standard);
   }
 
   &__social-media {
@@ -38,5 +36,10 @@
   .social-media__item img {
     @include adaptive-value(width, 55, 25, standard);
     @include adaptive-value(height, 55, 25, standard);
+  }
+
+  iframe {
+    @include adaptive-value(width, 773, 421, standard-tablet);
+    @include adaptive-value(height, 545, 297, standard-tablet);
   }
 }

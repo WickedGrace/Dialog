@@ -4,22 +4,22 @@
   border-radius: 50px;
 
   &-wrapper {
-    display: flex;
-    flex-direction: column;
-
     @include adaptive-value(padding-top, 24, 8, standard);
     @include adaptive-value(padding-bottom, 24, 8, standard);
+
+    display: flex;
+    flex-direction: column;
   }
 
   &-inner {
     @include adaptive-value(column-gap, 50, 10, standard);
 
-    display: flex;
-
     @include adaptive-value(padding-top, 50, 16, standard);
     @include adaptive-value(padding-bottom, 24, 16, standard);
     @include adaptive-value(padding-left, 50, 8, standard);
     @include adaptive-value(padding-right, 50, 8, standard);
+
+    display: flex;
   }
 
   &__heading {
@@ -35,16 +35,22 @@
   &__name {
     @include adaptive-value(font-size, 32, 12, standard);
 
-    text-align: left;
+    text-align: center;
 
     font-weight: 300;
+
+    .paragraph {
+      display: inline;
+    }
   }
 
   &__specialty {
     @extend %typography--default;
+    @include adaptive-value(font-size, 26, 13, standard);
+
+    text-align: center;
 
     font-weight: 600;
-    font-size: 26px;
   }
 
   &__name,
@@ -72,7 +78,7 @@
       content: '✧';
       display: inline-block;
 
-      width: 25px;
+      width: 15px;
     }
   }
 
@@ -81,8 +87,9 @@
 
     @include adaptive-value(font-size, 24, 8, standard);
 
-    align-self: self-end;
+    align-self: end;
 
     font-weight: 400;
+    margin-bottom: 10px;
   }
 }

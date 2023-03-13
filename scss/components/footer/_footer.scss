@@ -2,7 +2,12 @@
   background-color: $color-special;
   color: $color-text-secondary;
 
+  flex: 0 0 auto;
+
   &__logo {
+    @include adaptive-value(width, 72, 34, standard-mobile);
+    @include adaptive-value(height, 27, 9, standard-mobile);
+
     width: 100%;
   }
 
@@ -16,7 +21,7 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 10px 0 24px;
+    padding: 15px 0 15px;
     font-weight: 300;
   }
 
@@ -31,9 +36,10 @@
     padding-right: 15px;
 
     &:not(:first-child) {
+      @include adaptive-value(padding-left, 24, 8, standard);
+      @include adaptive-value(padding-top, 45, 13, standard);
+
       border-left: 1px solid $color-bg-secondary;
-      padding-left: 24px;
-      padding-top: 56px;
     }
   }
 
@@ -41,28 +47,28 @@
     display: flex;
     align-items: center;
 
-    gap: 20px;
+    column-gap: 20px;
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      @include adaptive-value(margin-bottom, 17, 8, standard-mobile);
     }
 
-    .img {
-      @include adaptive-value(width, 25, 8, standard);
-      @include adaptive-value(height, 25, 8, standard);
+    .menu__icon {
+      @include adaptive-value(width, 16, 6, standard-mobile);
+      @include adaptive-value(height, 16, 6, standard-mobile);
     }
   }
 
   &__social-media {
+    @include adaptive-value(margin-top, 18, 6, standard);
+    @include adaptive-value(column-gap, 58, 14, standard-mobile);
+
     display: flex;
     justify-content: flex-start;
+  }
 
-    margin-top: 20px;
-    column-gap: 58px;
-
-    img {
-      @include adaptive-value(width, 25, 5, standard);
-      @include adaptive-value(height, 25, 5, standard);
-    }
+  .social-media__logo {
+    @include adaptive-value(width, 25, 8, standard-mobile);
+    @include adaptive-value(height, 25, 8, standard-mobile);
   }
 }

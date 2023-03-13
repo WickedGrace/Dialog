@@ -5,87 +5,97 @@
   }
 
   &-wrapper {
-    @include adaptive-value(padding-top, 76, 24, standard);
+    @include adaptive-value(padding-top, 30, 64, standard-tablet);
     @include adaptive-value(padding-bottom, 232, 56, standard);
   }
 
   &__category:first-child {
     display: flex;
-    overflow: hidden;
+    justify-content: space-between;
 
-    column-gap: 40px;
+    column-gap: 20px;
 
-    .about-inner {
-      @extend %row--alighned;
+    .about {
+      &-inner {
+        @extend %row--alighned;
 
-      flex-direction: column;
-      align-self: center;
-      background: $color-btn-secondary;
+        flex-direction: column;
+        align-self: center;
+        background: $color-btn-secondary;
 
-      border-radius: 20px;
-      transform: rotate(4deg);
-      margin-left: 50px;
-
-      .holder {
-        @include adaptive-value(padding-top, 32, 10, standard);
-        @include adaptive-value(padding-bottom, 32, 10, standard);
-        @include adaptive-value(padding-left, 32, 10, standard);
-        @include adaptive-value(padding-right, 32, 10, standard);
-
-        background: #bde5dd;
         border-radius: 20px;
-        transform: rotate(-4deg);
+        transform: rotate(4deg);
+        margin-left: 20px;
+        width: 100%;
 
-        .accent {
-          color: $color-text-special;
+        .holder {
+          @include adaptive-value(padding-top, 32, 10, standard);
+          @include adaptive-value(padding-bottom, 32, 10, standard);
+          @include adaptive-value(padding-left, 32, 10, standard);
+          @include adaptive-value(padding-right, 32, 10, standard);
 
-          font-weight: 400;
+          background: #bde5dd;
+          border-radius: 20px;
+          transform: rotate(-4deg);
+
+          .accent {
+            color: $color-text-special;
+
+            font-weight: 400;
+          }
         }
       }
-    }
 
-    .about__text {
-      @include adaptive-value(font-size, 26, 13, standard);
+      &__text {
+        @include adaptive-value(font-size, 26, 13, standard);
 
-      font-weight: 200;
+        font-weight: 200;
+      }
+      &__img {
+        max-width: 50%;
+      }
     }
   }
 
   &__category:nth-child(2) {
-    @include adaptive-value(padding-top, 100, 48, standard);
-    @include adaptive-value(padding-right, 95, 8, standard);
-    @include adaptive-value(padding-bottom, 120, 48, standard);
+    @include adaptive-value(padding-top, 100, 48, standard-mobile);
+    @include adaptive-value(padding-right, 95, 0, standard-tablet);
+    @include adaptive-value(padding-bottom, 120, 48, standard-mobile);
 
-    .about-inner {
-      @include adaptive-value(column-gap, 150, 14, standard);
+    .about {
+      &-inner {
+        @include adaptive-value(column-gap, 150, 20, standard-tablet);
 
-      display: flex;
-    }
-
-    .about__text {
-      @include adaptive-value(font-size, 20, 10, standard);
-
-      font-weight: 200;
-
-      .accent {
-        text-decoration: underline;
+        display: flex;
       }
-    }
 
-    .about__text:not(:last-of-type) {
-      @include adaptive-value(margin-bottom, 32, 8, standard);
-    }
+      &__text {
+        @include adaptive-value(font-size, 20, 10, standard);
 
-    .about__img {
-      align-self: start;
-      overflow: hidden;
+        font-weight: 200;
+
+        .accent {
+          text-decoration: underline;
+        }
+      }
+
+      &__text:not(:last-of-type) {
+        @include adaptive-value(margin-bottom, 32, 8, standard);
+      }
+
+      &__img {
+        align-self: start;
+
+        max-width: 50%;
+        order: 2;
+      }
     }
   }
 
   &__category:last-child {
     .about {
       &__text {
-        @include adaptive-value(margin-bottom, 32, 8, standard);
+        @include adaptive-value(font-size, 22, 10, standard);
 
         font-weight: 200;
         line-height: 171%;
@@ -93,8 +103,8 @@
       }
 
       &__list {
-        @include adaptive-value(column-gap, 166, 20, standard-mobile);
-        @include adaptive-value(row-gap, 150, 48, standard-mobile);
+        @include adaptive-value(column-gap, 166, 20, standard-tablet);
+        @include adaptive-value(row-gap, 150, 48, standard-tablet);
 
         display: grid;
         align-self: center;
@@ -117,7 +127,7 @@
           content: '✧';
           display: inline-block;
 
-          width: 25px;
+          width: 15px;
         }
       }
     }

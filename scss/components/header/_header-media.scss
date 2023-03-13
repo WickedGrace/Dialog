@@ -19,6 +19,11 @@
   }
 
   .header {
+    .container--md {
+      @include adaptive-value(padding-left, 50, 13, standard-mobile);
+      @include adaptive-value(padding-right, 50, 12, standard-mobile);
+    }
+
     &__burger {
       display: block;
       position: relative;
@@ -103,11 +108,11 @@
 //mobile
 
 @media (max-width: 425px) {
-  .container {
-    padding: 13px 0 0 13px;
-  }
-
   .header {
+    .container {
+      padding: 13px 0 0 13px;
+    }
+
     &:before,
     .menu {
       background-color: $color-text-secondary;
@@ -128,7 +133,7 @@
     }
 
     &-wrapper {
-      padding: 0;
+      padding-top: 13px;
     }
 
     .logo {

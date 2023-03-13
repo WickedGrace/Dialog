@@ -13,6 +13,14 @@ $max-width-container-s: 1055;
           ((100vw - 320px) / #{$max-width-container - 320})
       );
     }
+  } @else if $type==standard-laptop {
+    #{$property}: $start-size + px;
+    @media (max-width: #{$max-width-container + px}) {
+      #{$property}: calc(
+        #{$min-size + px} + #{$add-size} *
+          ((100vw - 1024px) / #{$max-width-container-md - 1024})
+      );
+    }
   } @else if $type==standard-tablet {
     #{$property}: $start-size + px;
     @media (max-width: #{$max-width-container + px}) {
