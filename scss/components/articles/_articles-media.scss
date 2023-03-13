@@ -6,10 +6,14 @@
         width: 25%;
       }
     }
+
+    &__list {
+      width: 100%;
+    }
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   .articles {
     .container {
       padding: 0;
@@ -21,6 +25,28 @@
         width: 20%;
         margin: 0 20px;
       }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .articles {
+    .article {
+      &__item {
+        padding: 0;
+      }
+
+      &__more {
+        right: 8px;
+      }
+    }
+
+    &__list .slick-arrow.slick-prev {
+      left: 15px;
+    }
+
+    &__list .slick-arrow.slick-next {
+      right: 15px;
     }
   }
 }

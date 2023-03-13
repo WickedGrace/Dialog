@@ -125,8 +125,6 @@
 
     &__more {
       @extend %btn, %btn-secondary;
-
-      @include adaptive-value(right, 24, 8, standard);
       @include adaptive-value(bottom, 24, 8, standard);
       @include adaptive-value(padding-top, 15, 5.5, standard);
       @include adaptive-value(padding-bottom, 15, 5.5, standard);
@@ -137,6 +135,8 @@
 
       background-color: $color-btn-primary;
       position: absolute;
+
+      right: 24px;
 
       &:hover {
         background-color: $color-btn-primary--hovered;

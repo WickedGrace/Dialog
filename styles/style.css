@@ -866,7 +866,6 @@ html {
   border-radius: 20px;
   width: 100%; }
 .articles .article__more {
-  right: 24px;
   bottom: 24px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -874,10 +873,8 @@ html {
   padding-right: 22px;
   font-size: 18px;
   background-color: #8a5e9e;
-  position: absolute; }
-  @media (max-width: 1440px) {
-    .articles .article__more {
-      right: calc( 8px + 16 * ((100vw - 320px) / 1120) ); } }
+  position: absolute;
+  right: 24px; }
   @media (max-width: 1440px) {
     .articles .article__more {
       bottom: calc( 8px + 16 * ((100vw - 320px) / 1120) ); } }

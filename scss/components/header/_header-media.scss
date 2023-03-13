@@ -1,14 +1,6 @@
 @import './common/mixins.scss';
 @import './common/variables.scss';
 
-// @media (min-width: 1441px) {
-//   .header {
-//     .menu {
-//       margin-right: 65px;
-//     }
-//   }
-// }
-
 //laptop
 
 @media (max-width: 1024px) {
@@ -123,11 +115,6 @@
   .header {
     .container {
       padding: 13px 0 0 13px;
-    }
-
-    &:before,
-    .menu {
-      background-color: $color-text-secondary;
     }
 
     .menu {

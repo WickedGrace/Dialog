@@ -79,9 +79,6 @@
 @media (max-width: 425px) {
   .header .container {
     padding: 13px 0 0 13px; }
-  .header:before,
-  .header .menu {
-    background-color: #fff; }
   .header .menu.active {
     padding-top: 70px; }
   .header .menu__list {
@@ -171,7 +168,7 @@
   .hero-wrapper {
     padding-top: 40px; }
   .hero-inner {
-    padding: 0; }
+    padding: 10px 0 0 0; }
   .hero__content {
     margin: 10px auto 0;
     row-gap: 10px; }
@@ -245,13 +242,24 @@
         align-self: center; } }
 @media (max-width: 768px) {
   .articles__heading::before, .articles__heading::after {
-    width: 25%; } }
-@media (max-width: 425px) {
+    width: 25%; }
+  .articles__list {
+    width: 100%; } }
+@media (max-width: 575px) {
   .articles .container {
     padding: 0; }
   .articles__heading::before, .articles__heading::after {
     width: 20%;
     margin: 0 20px; } }
+@media (max-width: 425px) {
+  .articles .article__item {
+    padding: 0; }
+  .articles .article__more {
+    right: 8px; }
+  .articles__list .slick-arrow.slick-prev {
+    left: 15px; }
+  .articles__list .slick-arrow.slick-next {
+    right: 15px; } }
 @media (max-width: 900px) {
   .profile-inner {
     padding: 16px 0; }
