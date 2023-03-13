@@ -50,13 +50,13 @@
   &__list .slick-arrow.slick-prev {
     background: url(../img/articles/arrow_prev.svg) 0 0 / 100% no-repeat;
 
-    left: 20px;
+    left: 30px;
   }
 
   &__list .slick-arrow.slick-next {
     background: url(../img/articles/arrow_next.svg) 0 0 / 100% no-repeat;
 
-    right: 20px;
+    right: 30px;
   }
 
   .slick-slider {
@@ -69,15 +69,15 @@
   }
 
   .slick-arrow {
-    @include adaptive-value(width, 45, 14, standard);
-    @include adaptive-value(height, 45, 14, standard);
+    @include adaptive-value(width, 29, 14, standard);
+    @include adaptive-value(height, 27, 14, standard);
 
     position: absolute;
     border: none;
     display: block;
     background-size: cover;
 
-    z-index: 50;
+    z-index: 1;
     top: 40%;
     font-size: 0;
 

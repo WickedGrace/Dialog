@@ -11,8 +11,24 @@
 
       .card {
         &__item {
-          width: 200px;
+          width: 250px;
           margin: 0;
+        }
+
+        &__img {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .services {
+    .cards {
+      .card {
+        &__item {
+          width: 200px;
         }
 
         &__img {
@@ -23,7 +39,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 530px) {
   .services {
     .cards {
       .card {
@@ -31,13 +47,10 @@
           width: 150px;
         }
 
-        &d__img {
+        &__img {
           width: 150px;
         }
       }
-    }
-    &__more.link {
-      align-self: center;
     }
   }
 }
@@ -56,6 +69,10 @@
           width: 200px;
         }
       }
+    }
+
+    &__more.link {
+      align-self: center;
     }
   }
 }

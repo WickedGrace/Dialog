@@ -1,6 +1,14 @@
 @import './common/mixins.scss';
 @import './common/variables.scss';
 
+// @media (min-width: 1441px) {
+//   .header {
+//     .menu {
+//       margin-right: 65px;
+//     }
+//   }
+// }
+
 //laptop
 
 @media (max-width: 1024px) {
@@ -19,6 +27,10 @@
   }
 
   .header {
+    a.link {
+      color: $color-text-primary;
+    }
+
     .container--md {
       @include adaptive-value(padding-left, 50, 13, standard-mobile);
       @include adaptive-value(padding-right, 50, 12, standard-mobile);

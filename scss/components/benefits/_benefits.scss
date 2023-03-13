@@ -7,6 +7,7 @@
     @include adaptive-value(column-gap, 125, -20, standard);
 
     display: flex;
+    justify-content: center;
   }
 
   .benefit {

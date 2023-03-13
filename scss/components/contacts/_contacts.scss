@@ -33,6 +33,10 @@
     gap: 58px;
   }
 
+  a.link {
+    color: $color-text-primary;
+  }
+
   .social-media__item img {
     @include adaptive-value(width, 55, 25, standard);
     @include adaptive-value(height, 55, 25, standard);

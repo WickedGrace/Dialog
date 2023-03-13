@@ -1,7 +1,7 @@
 .header {
-  width: 100%;
   position: fixed;
 
+  width: 100%;
   flex: 0 0 auto;
   top: 0;
   z-index: 50;
@@ -9,7 +9,7 @@
   &:before {
     content: '';
     position: absolute;
-    background-color: $color-bg-special;
+    background-color: #f5b03e;
 
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@
       @extend %row--alighned;
 
       @include adaptive-value(font-size, 15, 12, standard);
-      column-gap: 30px;
+      column-gap: 35px;
 
       justify-content: space-between;
       position: relative;
@@ -59,6 +59,7 @@
       font-weight: 400;
       z-index: 2;
     }
+
     &__item {
       &:hover {
         display: block;
