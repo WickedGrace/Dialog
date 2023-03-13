@@ -791,7 +791,7 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  max-width: 100%; }
+  width: 100%; }
 .articles__list .slick-arrow.slick-prev {
   background: url(../img/articles/arrow_prev.svg) 0 0/100% no-repeat;
   left: 20px; }
@@ -830,7 +830,8 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative; }
+  position: relative;
+  width: 100%; }
 .articles .article__title {
   padding: 13px;
   font-size: 24px;
@@ -855,7 +856,7 @@ html {
 .articles .article__img {
   display: block;
   border-radius: 20px;
-  max-width: 100%; }
+  width: 100%; }
 .articles .article__more {
   right: 24px;
   bottom: 24px;

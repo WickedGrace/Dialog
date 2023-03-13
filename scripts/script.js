@@ -21,27 +21,6 @@ $('a[href*="#"]').on('click', function (e) {
   );
 });
 
-//services slider
-
-$(document).ready(function () {
-  $('.cards').slick({
-    responsive: [
-      {
-        breakpoint: 1440,
-        settings: 'unslick',
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          adaptiveHeight: true,
-        },
-      },
-    ],
-  });
-});
-
 //articles slider
 
 $(document).ready(function () {

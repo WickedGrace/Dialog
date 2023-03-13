@@ -43,7 +43,8 @@
     position: relative;
     justify-content: center;
     text-align: center;
-    max-width: 100%;
+
+    width: 100%;
   }
 
   &__list .slick-arrow.slick-prev {
@@ -91,6 +92,8 @@
 
       flex-direction: column;
       position: relative;
+
+      width: 100%;
     }
 
     &__title {
@@ -116,7 +119,7 @@
       display: block;
 
       border-radius: 20px;
-      max-width: 100%;
+      width: 100%;
     }
 
     &__more {
