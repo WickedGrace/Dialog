@@ -11,10 +11,15 @@
 
 @media (max-width: 425px) {
   .articles {
+    .container {
+      padding: 0;
+    }
+
     &__heading {
       &::before,
       &::after {
         width: 20%;
+        margin: 0 20px;
       }
     }
   }

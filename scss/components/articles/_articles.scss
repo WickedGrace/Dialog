@@ -35,51 +35,50 @@
     @include adaptive-value(padding-top, 72, 20, standard);
     @include adaptive-value(padding-bottom, 104, 56, standard);
 
-    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   &__list {
-    @extend %row--alighned;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
   }
 
   &__list .slick-arrow.slick-prev {
-    background: url(../img/articles/arrow_prev.svg) no-repeat;
+    background: url(../img/articles/arrow_prev.svg) 0 0 / 100% no-repeat;
 
-    left: 0;
+    left: 20px;
   }
 
   &__list .slick-arrow.slick-next {
-    background: url(../img/articles/arrow_next.svg) no-repeat;
+    background: url(../img/articles/arrow_next.svg) 0 0 / 100% no-repeat;
 
-    right: 0;
+    right: 20px;
   }
 
   .slick-slider {
     flex-direction: column;
-
-    padding-right: 65px;
-    padding-left: 65px;
   }
 
   .slick-list {
     overflow: hidden;
     text-align: center;
-
-    max-width: 1114px;
   }
 
   .slick-arrow {
+    @include adaptive-value(width, 45, 14, standard);
+    @include adaptive-value(height, 45, 14, standard);
+
     position: absolute;
     border: none;
     display: block;
     background-size: cover;
 
-    z-index: 1;
+    z-index: 50;
     top: 40%;
     font-size: 0;
-
-    width: 45px;
-    height: 45px;
 
     &:hover {
       transform: scale(1.2);
@@ -87,16 +86,11 @@
   }
 
   .article {
-    position: relative;
-    text-align: center;
-
     &__item {
       @extend %row--alighned;
 
       flex-direction: column;
-
-      @include adaptive-value(width, 1114, 425, standard);
-      @include adaptive-value(height, 400, 134, standard);
+      position: relative;
     }
 
     &__title {
@@ -119,9 +113,10 @@
     }
 
     &__img {
+      display: block;
+
       border-radius: 20px;
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
     }
 
     &__more {
@@ -133,6 +128,8 @@
       @include adaptive-value(padding-bottom, 15, 5.5, standard);
       @include adaptive-value(padding-left, 22, 3.5, standard);
       @include adaptive-value(padding-right, 22, 3.5, standard);
+
+      @include adaptive-value(font-size, 18, 8, standard);
 
       background-color: $color-btn-primary;
       position: absolute;

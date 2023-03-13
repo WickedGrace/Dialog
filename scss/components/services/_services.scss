@@ -36,6 +36,7 @@
 
   .cards {
     display: flex;
+    min-width: 0;
     // @extend %row;
 
     @include adaptive-value(padding-bottom, 157, 48, standard);
