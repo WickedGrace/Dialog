@@ -791,7 +791,7 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  width: 100%; }
+  width: 80%; }
 .articles__list .slick-arrow.slick-prev {
   background: url(../img/articles/arrow_prev.svg) 0 0/100% no-repeat;
   left: 20px; }
@@ -1182,7 +1182,8 @@ html {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    margin: 0 auto; }
     @media (max-width: 1440px) {
       .reviews .review__item .item-inner {
         padding-top: calc( 30px + 66 * ((100vw - 768px) / 672) ); } }
