@@ -38,17 +38,6 @@
   &__list {
     display: flex;
     flex-direction: column;
-
-    .slick-slider {
-      @extend %row--alighned;
-
-      flex-direction: column;
-    }
-
-    .slick-list {
-      @include adaptive-value(width, 1055, 425, standard);
-      overflow: hidden;
-    }
   }
 
   .review {
@@ -68,7 +57,7 @@
 
         flex-direction: column;
 
-        margin: 0 auto;
+        // margin: 0 auto;
       }
     }
 
