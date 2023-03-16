@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url('Roboto-Regular-webfont.eot');
+  src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('Roboto-Regular-webfont.woff2') format('woff2'),
+    url('Roboto-Regular-webfont.woff') format('woff'),
+    url('Roboto-Regular-webfont.ttf') format('truetype'),
+    url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Roboto', 'Arial', 'sans-serif';
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+html {
+  height: 100%;
+}
+
+.page {
+  background: $color-bg-body;
+
+  flex: 1 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  @include adaptive-value(padding-left, 50, 30, standard);
+  @include adaptive-value(padding-right, 50, 30, standard);
+
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container--md {
+  @include adaptive-value(padding-left, 70, 50, md-tablet);
+  @include adaptive-value(padding-right, 70, 50, md-tablet);
+
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.container--s {
+  max-width: 1055px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link {
+  text-decoration: none;
+  color: $color-text-primary;
+}
+
+.link,
+.btn,
+button {
+  cursor: pointer;
+}
+
+.paragraph {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.callback {
+  @extend %btn, %btn-special;
+
+  position: relative;
+  z-index: 2;
+
+  &__img {
+    @include adaptive-value(margin-right, 12, 6, standard);
+    @include adaptive-value(width, 16, 8, standard);
+    @include adaptive-value(height, 16, 8, standard);
+  }
+
+  &__link {
+    color: $color-text-secondary;
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slick-dots {
+  @extend %row--alighned;
+
+  @include adaptive-value(margin-top, 24, 8, standard);
+  @include adaptive-value(column-gap, 10, 19, standard);
+
+  z-index: 1;
+}
+.slick-dots button {
+  @extend %row--alighned;
+
+  @include adaptive-value(width, 15, 6, standard);
+  @include adaptive-value(height, 15, 6, standard);
+
+  background-color: $color-bg-pagination;
+  border: none;
+
+  font-size: 0;
+  border-radius: 50%;
+}
+.slick-active button {
+  background-color: $color-bg-pagination--active;
+}

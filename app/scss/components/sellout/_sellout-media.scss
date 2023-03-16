@@ -1,0 +1,25 @@
+//tablet
+
+@media (max-width: 768px) {
+  .sellout {
+    &-wrapper {
+      padding: 16px 0;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .sellout {
+    &-wrapper {
+      padding: 16px 30px;
+    }
+    .container {
+      padding: 0;
+    }
+    &__content {
+      .paragraph {
+        display: block;
+      }
+    }
+  }
+}

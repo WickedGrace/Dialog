@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+  .articles {
+    &__heading {
+      &::before,
+      &::after {
+        width: 25%;
+      }
+    }
+
+    &__list {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .articles {
+    .container {
+      padding: 0;
+    }
+
+    &__heading {
+      &::before,
+      &::after {
+        width: 20%;
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .articles {
+    .article {
+      &__more {
+        right: 8px;
+      }
+    }
+
+    &__list .slick-arrow.slick-prev {
+      left: 15px;
+    }
+
+    &__list .slick-arrow.slick-next {
+      right: 15px;
+    }
+  }
+}
